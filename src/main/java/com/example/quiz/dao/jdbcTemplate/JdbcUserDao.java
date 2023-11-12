@@ -1,10 +1,9 @@
-package com.example.quiz.dao;
+package com.example.quiz.dao.jdbcTemplate;
 
-import com.example.quiz.domain.Question;
+import com.example.quiz.dao.interfaces.UserDao;
 import com.example.quiz.domain.User;
 import com.example.quiz.exceptions.DuplicateEmailException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -15,7 +14,7 @@ import java.util.List;
 
 
 @Repository
-public class UserDaoImpl implements UserDao{
+public class JdbcUserDao implements UserDao {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
@@ -62,7 +61,7 @@ public class UserDaoImpl implements UserDao{
 
     public User getUserByUserId(int userId) {
         String sql = "SELECT * FROM user WHERE u_id = ?";
-        return jdbcTemplate.queryForObject(sql, new Object[]{userId}, new BeanPropertyRowMapper<>(User.class));
+        return jdbcTemplate.queryForObject(sql, new Object[]{userId}, userRowMapper);
     }
 
     @Override

@@ -1,7 +1,6 @@
 package com.example.quiz.service;
 
-import com.example.quiz.dao.UserDao;
-import com.example.quiz.domain.Question;
+import com.example.quiz.dao.interfaces.UserDao;
 import com.example.quiz.domain.User;
 import com.example.quiz.exceptions.DuplicateEmailException;
 import org.springframework.beans.factory.annotation.Autowired;

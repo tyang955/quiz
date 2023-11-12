@@ -1,5 +1,6 @@
-package com.example.quiz.dao;
+package com.example.quiz.dao.jdbcTemplate;
 
+import com.example.quiz.dao.interfaces.QuizQuestionDao;
 import com.example.quiz.domain.QuizQuestion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -13,7 +14,7 @@ import java.util.List;
  */
 
 @Repository
-public class QuizQuestionDaoImpl {
+public class JdbcQuizQuestionDao implements QuizQuestionDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 

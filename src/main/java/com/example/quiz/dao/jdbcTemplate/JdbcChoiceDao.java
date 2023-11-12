@@ -1,9 +1,8 @@
-package com.example.quiz.dao;
+package com.example.quiz.dao.jdbcTemplate;
 
+import com.example.quiz.dao.interfaces.ChoiceDao;
 import com.example.quiz.domain.Choice;
-import com.example.quiz.domain.Question;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -17,7 +16,7 @@ import java.util.List;
  */
 
 @Repository
-public class ChoiceDaoImpl {
+public class JdbcChoiceDao implements ChoiceDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 

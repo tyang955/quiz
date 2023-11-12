@@ -1,6 +1,6 @@
 package com.example.quiz.service;
 
-import com.example.quiz.dao.*;
+import com.example.quiz.dao.interfaces.*;
 import com.example.quiz.domain.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,13 +21,13 @@ public class QuizResultService {
     private UserDao userDao;
 
     @Autowired
-    private QuizQuestionDaoImpl quizQuestionDao;
+    private QuizQuestionDao quizQuestionDao;
 
     @Autowired
-    private QuestionDaoImpl questionDao;
+    private QuestionDao questionDao;
 
     @Autowired
-    private ChoiceDaoImpl choiceDao;
+    private ChoiceDao choiceDao;
 
     public QuizResultDto getQuizDetails(Integer quizId) {
 

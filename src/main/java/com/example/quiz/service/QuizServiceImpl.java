@@ -1,6 +1,6 @@
 package com.example.quiz.service;
 
-import com.example.quiz.dao.QuizDao;
+import com.example.quiz.dao.interfaces.QuizDao;
 import com.example.quiz.domain.Quiz;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

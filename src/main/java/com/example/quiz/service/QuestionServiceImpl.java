@@ -1,7 +1,7 @@
 package com.example.quiz.service;
 
-import com.example.quiz.dao.ChoiceDaoImpl;
-import com.example.quiz.dao.QuestionDaoImpl;
+import com.example.quiz.dao.interfaces.ChoiceDao;
+import com.example.quiz.dao.interfaces.QuestionDao;
 import com.example.quiz.domain.Choice;
 import com.example.quiz.domain.Question;
 import com.example.quiz.helper.QuestionForm;
@@ -18,10 +18,10 @@ import java.util.List;
 public class QuestionServiceImpl {
 
     @Autowired
-    private QuestionDaoImpl questionDao;
+    private QuestionDao questionDao;
 
     @Autowired
-    private ChoiceDaoImpl choiceDao;
+    private ChoiceDao choiceDao;
 
     public List<Question> getRandomActiveQuestionsByCategory(int categoryId, int limit) {
         return questionDao.getRandomActiveQuestionsByCategory(categoryId, limit);

@@ -1,4 +1,4 @@
-package com.example.quiz.dao;
+package com.example.quiz.dao.interfaces;
 import com.example.quiz.domain.Category;
 import java.util.List;
 /**

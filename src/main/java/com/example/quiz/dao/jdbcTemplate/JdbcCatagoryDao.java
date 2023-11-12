@@ -1,5 +1,6 @@
-package com.example.quiz.dao;
+package com.example.quiz.dao.jdbcTemplate;
 
+import com.example.quiz.dao.interfaces.CategoryDao;
 import com.example.quiz.domain.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -11,7 +12,7 @@ import java.util.List;
  * Created by tianhaoyang on 11/5/23.
  */
 @Repository
-public class CatagoryDaoImpl implements CategoryDao{
+public class JdbcCatagoryDao implements CategoryDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 

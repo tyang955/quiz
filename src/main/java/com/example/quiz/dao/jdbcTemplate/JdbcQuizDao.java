@@ -1,22 +1,19 @@
-package com.example.quiz.dao;
+package com.example.quiz.dao.jdbcTemplate;
 
+import com.example.quiz.dao.interfaces.QuizDao;
 import com.example.quiz.domain.Quiz;
-import com.example.quiz.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.support.GeneratedKeyHolder;
-import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
 
-import java.sql.PreparedStatement;
 import java.util.List;
 
 /**
  * Created by tianhaoyang on 11/5/23.
  */
 @Repository
-public class QuizDaoImpl implements QuizDao{
+public class JdbcQuizDao implements QuizDao {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;

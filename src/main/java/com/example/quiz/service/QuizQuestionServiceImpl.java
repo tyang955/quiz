@@ -1,6 +1,6 @@
 package com.example.quiz.service;
 
-import com.example.quiz.dao.QuizQuestionDaoImpl;
+import com.example.quiz.dao.interfaces.QuizQuestionDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class QuizQuestionServiceImpl {
     @Autowired
-    private QuizQuestionDaoImpl quizQuestionDao;
+    private QuizQuestionDao quizQuestionDao;
 
     @Transactional
     public void saveQuizQuestion(int quizId, int questionId, int userChoiceId) {
